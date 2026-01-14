@@ -2,66 +2,77 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #fff;
+    background: #0e1117;
+    color: #e6edf3;
     min-height: 100vh;
 }
 
-header {
-    text-align: center;
-    padding: 40px 20px;
+/* Top bar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    background: #161b22;
+    border-bottom: 1px solid #21262d;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    opacity: 0.8;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-    padding: 40px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    border-radius: 15px;
-    padding: 30px 20px;
-    text-decoration: none;
-    color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card h2 {
-    margin-bottom: 10px;
+.topbar h1 {
     font-size: 1.4rem;
+    font-weight: 600;
 }
 
-.card p {
-    font-size: 0.95rem;
-    opacity: 0.8;
+.topbar span {
+    font-size: 0.85rem;
+    opacity: 0.7;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+/* App grid */
+.apps {
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 25px;
 }
 
+/* App card */
+.app {
+    background: #161b22;
+    border-radius: 14px;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #e6edf3;
+    transition: all 0.25s ease;
+    border: 1px solid #21262d;
+}
+
+.app:hover {
+    background: #1f6feb;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(31,111,235,0.35);
+}
+
+/* Icon */
+.icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* Label */
+.app p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    font-size: 0.85rem;
-    opacity: 0.6;
+    padding: 15px;
+    font-size: 0.75rem;
+    opacity: 0.5;
 }
